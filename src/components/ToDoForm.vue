@@ -20,6 +20,11 @@
 
 <script>
   export default {
+    data() {
+      return {
+        label: ""
+      };
+    },
     methods: {
       onSubmit() {
         if(this.label === "") {
@@ -28,11 +33,6 @@
         this.$emit("todo-added", this.label);
         this.label = "";
       }
-    },
-    data() {
-      return {
-        label: ""
-      };
     }
   };
 </script>
